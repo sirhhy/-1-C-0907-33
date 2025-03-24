@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int prod(int a, int b, int c) 
+{
+int neg = (a < 0) + (b < 0) + (c < 0);
+
+int zero = (a == 0) | (b == 0) || (c == 0);
+
+return zero ? 0 : (neg % 2 ? -1 : 1);
+}
+int main() 
+{ 
+int a, b, c;
+
+printf("Введите первое число: ");
+
+scanf("%d", &a) ;
+
+printf( "Введите второе число: ");
+
+scanf ("%d", &b);
+
+printf("Введите третье число: ");
+
+scanf ("%d", &c);
+
+int result = prod(a, b, c);
+
+printf( "Знак произведения: %d\n", result);
+
+return 0;
+
+}
